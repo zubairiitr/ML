@@ -1,5 +1,12 @@
+import os
 import sys
-import logging
+
+# add the source directory to the PYTHONPATH
+src_path = "/path/to/ML/source"
+sys.path.append(src_path)
+
+# import the logging module from the source directory
+from source.logger import logging
 
 def error_message_detail(error,error_detail:sys):
     _,_,exc_tb=error_detail.exc_info()
